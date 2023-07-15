@@ -116,7 +116,7 @@ describe('Issue create', () => {
 
  
 
-  it.only('Should create a new issue with random data and validate it successfully, test 2', () => {
+  it('Should create a new issue with random data and validate it successfully, test 2', () => {
     // Generate random title using faker
     const randomTitle = faker.lorem.word();
     const randomDescription = faker.lorem.word();
