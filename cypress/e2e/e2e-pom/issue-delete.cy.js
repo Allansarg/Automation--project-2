@@ -40,7 +40,7 @@ describe('Delete Issue', () => {
 
         // Assert that the issue is not deleted and still displayed on the Jira board
         cy.get('[data-testid="board-list:backlog"]').should('be.visible').and('have.length', '1').within(() => {
-            cy.get('[data-testid="list-issue"]').should('exist');
+            cy.contains('This is an issue of type: Task.').should('exist'); 
         });
     });
 
