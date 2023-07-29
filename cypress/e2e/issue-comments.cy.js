@@ -27,10 +27,6 @@ describe('Issue comments creating, editing and deleting', () => {
         });
     });
 
-
-
-
-
     it('Should edit a comment successfully', () => {
         const previousComment = 'An old silent pond...';
         const comment = 'TEST_COMMENT_EDITED';
