@@ -70,8 +70,8 @@ describe('Issue comments creating, editing and deleting', () => {
     });
 
     it('Should create,edit and delete comment successfully', () => {
-        const comment = 'TEST_COMMENT';
-        const comment_edited = 'TEST_COMMENT_EDITED';
+        const comment = 'Comment';
+        const comment_edited = 'Comment 2';
 
         getIssueDetailsModal().within(() => {
             //Add comment
