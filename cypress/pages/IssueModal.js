@@ -14,6 +14,7 @@ class IssueModal {
         this.cancelDeletionButtonName = "Cancel";
         this.confirmationPopup = '[data-testid="modal:confirm"]';
         this.closeDetailModalButton = '[data-testid="icon:close"]';
+        this.estematedNumberField='input[placeholder="Number"]';
     }
 
     getIssueModal() {
@@ -37,7 +38,7 @@ class IssueModal {
     }
 
     editTitle(title) {
-        cy.get(this.title).debounced('type', title);
+        cy.get(this.title).type(title);
     }
 
     editDescription(description) {
@@ -106,6 +107,14 @@ class IssueModal {
         cy.get(this.issueDetailModal).get(this.closeDetailModalButton).first().click();
         cy.get(this.issueDetailModal).should('not.exist');
     }
+    clickOnIssueWithTitle(){
+        cy.get(this.issuesList)
+         .first()
+        .find('p')
+        .contains('TEST_TITLE')
+        .click()
+    }
+    
 }
 
 export default new IssueModal();
