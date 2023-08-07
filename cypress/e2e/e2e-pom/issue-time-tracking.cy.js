@@ -36,7 +36,7 @@ describe('Issue Tracker Element Test', () => {
   it('Update estimation', () => {
     IssueModal.clickOnIssueWithTitle();
     cy.get('input[placeholder="Number"]').clear().type(20).blur();
-    cy.wait(3000)
+    cy.wait(3000);
     IssueModal.closeDetailModal();
     IssueModal.clickOnIssueWithTitle();
 
