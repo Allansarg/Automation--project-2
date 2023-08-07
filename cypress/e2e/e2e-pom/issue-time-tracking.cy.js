@@ -23,7 +23,8 @@ describe('Issue Tracker Element Test', () => {
   it('Add estimation', () => {
     IssueModal.clickOnIssueWithTitle();
     cy.contains('No time logged').should('be.visible');
-    cy.get('input[placeholder="Number"]').type(10).blur();
+    cy.get('input[placeholder="Number"]').type(10)
+    cy.wait(3000);
     IssueModal.closeDetailModal();
     IssueModal.clickOnIssueWithTitle();
 
@@ -35,6 +36,7 @@ describe('Issue Tracker Element Test', () => {
   it('Update estimation', () => {
     IssueModal.clickOnIssueWithTitle();
     cy.get('input[placeholder="Number"]').clear().type(20).blur();
+    cy.wait(3000)
     IssueModal.closeDetailModal();
     IssueModal.clickOnIssueWithTitle();
 
